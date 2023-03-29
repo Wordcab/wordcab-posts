@@ -3,6 +3,7 @@ draft: false
 date: 2023-03-29
 categories:
     - essay
+    - learning
 authors:
     - chainyo
 ---
