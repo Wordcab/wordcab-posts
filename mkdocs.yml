@@ -59,8 +59,6 @@ plugins:
   - git-committers:
       repository: Wordcab/wordcab-posts
       branch: main
-  # - optimize:
-  #     enabled: !ENV [CI, false]
   - privacy:
       enabled: !ENV [CI, false]
   - search:
@@ -70,8 +68,7 @@ plugins:
 
 nav:
   - 👋 Welcome Home: index.md
-  - 💬 Blog:
-    - blog/index.md
+  - 💬 Blog: blog/index.md
 
 extra:
   analytics:
