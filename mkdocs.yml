@@ -59,8 +59,8 @@ plugins:
   - git-committers:
       repository: Wordcab/wordcab-posts
       branch: main
-  - optimize:
-      enabled: !ENV [CI, false]
+  # - optimize:
+  #     enabled: !ENV [CI, false]
   - privacy:
       enabled: !ENV [CI, false]
   - search:
