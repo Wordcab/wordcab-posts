@@ -1,11 +1,54 @@
-site_name: Wordcab
+site_name: Wordcab Posts
+
+copyright: Copyright &copy; 2023 Wordcab team.
+edit_uri: edit/main/docs/
+repo_url: https://github.com/Wordcab/wordcab-posts
+repo_name: wordcab/wordcab-posts
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil-plus
+    view: material/eye
+  features:
+    - content.action.edit
+    - navigation.footer
+    - navigation.tracking
 
 plugins:
   - blog
+  - optimize
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      repository: Wordcab/wordcab-posts
+      branch: main
 
 nav:
   - Blog:
     - blog/index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Wordcab
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/wordcab
+  generator: true
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+    feedback:
+      title: Was this page informative?
+      ratings:
+        - icon: material/heart
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/heart-broken
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by telling us what was wrong at **info@wordcab.com**
