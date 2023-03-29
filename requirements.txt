@@ -1,4 +1,6 @@
 # After setting up a GH_TOKEN, you can use the following to install the insiders version
 # pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+cairosvg
 mkdocs-git-committers-plugin-2
 mkdocs-git-revision-date-localized-plugin
+pillow

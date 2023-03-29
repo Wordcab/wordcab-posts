@@ -1,12 +1,16 @@
-site_name: Wordcab Posts
+site_name: Posts
+site_url: https://wordcab.github.io/wordcab-posts/
 
 copyright: Copyright &copy; 2023 Wordcab team.
 edit_uri: edit/main/docs/
 repo_url: https://github.com/Wordcab/wordcab-posts
-repo_name: wordcab/wordcab-posts
+repo_name: Wordcab/wordcab-posts
 
 theme:
   name: material
+  language: en
+  logo: assets/wordcab-logo.svg
+  favicon: assets/favicon.png
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil-plus
@@ -14,31 +18,65 @@ theme:
   features:
     - content.action.edit
     - navigation.footer
+    - navigation.path
+    - navigation.prune
     - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: amber
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: white
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+    
 
 plugins:
   - blog
-  - optimize
   - git-revision-date-localized:
+      enabled: !ENV [CI, false]
       enable_creation_date: true
+      type: date
   - git-committers:
       repository: Wordcab/wordcab-posts
       branch: main
+  - optimize:
+      enabled: !ENV [CI, false]
+  - privacy:
+      enabled: !ENV [CI, false]
+  - search:
+      lang: en
+  - social:
+      cards: !ENV [CARDS, false]
 
 nav:
+  - Home: index.md
   - Blog:
     - blog/index.md
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Wordcab
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/wordcab
-  generator: true
   analytics:
     provider: google
-    property: G-XXXXXXXXXX
+    property: G-196126008
     feedback:
       title: Was this page informative?
       ratings:
@@ -52,3 +90,16 @@ extra:
           data: 0
           note: >-
             Thanks for your feedback! Help us improve this page by telling us what was wrong at **info@wordcab.com**
+  consent:
+    title: Cookies
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+  generator: true
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Wordcab
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/wordcab
