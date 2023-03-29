@@ -12,8 +12,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
-    env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -31,6 +29,6 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+          pip install git+https://${{ secrets.GH_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
           pip install -r requirements.txt
           mkdocs gh-deploy --force
