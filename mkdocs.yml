@@ -55,7 +55,8 @@ plugins:
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
       enable_creation_date: true
-      type: date
+      type: timeago
+      fallback_to_build_date: true
   - git-committers:
       repository: Wordcab/wordcab-posts
       branch: main
