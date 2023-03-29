@@ -1,4 +1,4 @@
-<h1 align="center">Wordcab Python</h1>
+<h1 align="center">Wordcab Posts</h1>
 <br>
 <div align="center">
 	<a href="https://linkedin.com/company/wordcab" target="_blank">

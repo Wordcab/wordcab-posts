@@ -1,4 +1,4 @@
-site_name: Posts
+site_name: Wordcab Posts
 site_url: https://wordcab.github.io/wordcab-posts/
 
 copyright: Copyright &copy; 2023 Wordcab team.
@@ -9,7 +9,7 @@ repo_name: Wordcab/wordcab-posts
 theme:
   name: material
   language: en
-  logo: assets/wordcab-logo.svg
+  logo: assets/wordcab-favicon.png
   favicon: assets/favicon.png
   icon:
     repo: fontawesome/brands/github
@@ -34,7 +34,7 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: amber
+      primary: red
       accent: blue
       toggle:
         icon: material/brightness-7
@@ -43,7 +43,7 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: white
+      primary: red
       accent: blue
       toggle:
         icon: material/brightness-4
@@ -69,8 +69,8 @@ plugins:
       cards: !ENV [CARDS, false]
 
 nav:
-  - Home: index.md
-  - Blog:
+  - 👋 Welcome Home: index.md
+  - 💬 Blog:
     - blog/index.md
 
 extra:
