@@ -111,7 +111,9 @@ extra:
       link: https://www.linkedin.com/company/wordcab
 
 extra_css:
+  - assets/css/custom.css
   - assets/css/termynal.css
 
 extra_javascript:
+  - assets/js/custom.js
   - assets/js/termynal.js
