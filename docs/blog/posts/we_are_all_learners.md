@@ -6,6 +6,8 @@ categories:
     - learning
 authors:
     - chainyo
+title: We are all learners
+description: Why write about your learning in tech, particularly in AI?
 ---
 
 # We are all learners

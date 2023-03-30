@@ -7,9 +7,11 @@ categories:
     - nvidia
 authors:
     - chainyo
+title: Keep your workstation clean - Docker
+description: Optimize Docker Storage for Machine Learning
 ---
 
-# Keep your workstation clean
+# Keep your workstation clean - Docker
 ## Optimize Docker Storage for Machine Learning
 
 When working with Machine Learning, especially with large images like NVIDIA ones for training models on GPUs,
