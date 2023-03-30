@@ -17,6 +17,7 @@ theme:
     view: material/eye
   features:
     - content.action.edit
+    - content.tabs.link
     - navigation.footer
     - navigation.path
     - navigation.prune
@@ -101,3 +102,7 @@ extra:
       link: https://github.com/Wordcab
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/wordcab
+extra_css:
+- css/termynal.css
+extra_javascript:
+- js/termynal.js

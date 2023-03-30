@@ -29,27 +29,41 @@ In this post, we'll cover how to use Docker commands to prevent unused files and
 
 Stopped containers can take up valuable storage space on your workstation. To remove them, use the following command:
 
-```bash
-docker container prune
+<div class="termy">
+
+```console
+$ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: some bytes
 ```
 
-This command will prompt you to confirm the deletion of stopped containers. Enter 'y' to proceed.
+</div>
+
+This command will prompt you to confirm the deletion of stopped containers. Enter `y` to proceed.
 Be careful, as this action is irreversible.
 
 ## 2. Remove unused images
 
-Unused images can also occupy significant storage space. I always have multiple NVIDIA images on my workstation because
-of the different versions of CUDA and cuDNN that I use for different projects.
+Unused images can also occupy significant storage space. I always have multiple **NVIDIA** images on my workstation because
+of the different versions of **CUDA** and **cuDNN** that I use for different projects.
 
 To remove unused images, use the following command:
 
-```bash
-docker image prune
+<div class="termy">
+
+```console
+$ docker image prune
+WARNING! This will remove all dangling images.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: some bytes
 ```
 
-Bye-bye, unused cuda11.0-cudnn8-devel-ubuntu18.04 image! 😢
+</div>
 
-But hey, now we are all using CUDA 12.1 and PyTorch 2.0, right? 
+Bye-bye, unused `cuda11.0-cudnn8-devel-ubuntu18.04` image! 😢
+
+But hey, now we are all using **CUDA 12.1** and **PyTorch 2.0**, right? 
 
 Right? 😅
 
@@ -60,15 +74,25 @@ Unused networks and volumes can also take up storage space on your workstation.
 It's less the case when working with ML training, but if you have built some APIs on top of your ML models, you may have
 some unused networks and volumes. It's always a good idea to clean them up from time to time.
 
-To remove unused networks and volumes, use the following command:
+To remove unused networks and volumes, use the following commands:
 
-```bash
-docker network prune
-docker volume prune
+<div class="termy">
+
+```console
+$ docker network prune
+WARNING! This will remove all custom networks not used by at least one container.
+Are you sure you want to continue? [y/N] y
+
+$ docker volume prune
+WARNING! This will remove all local volumes not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: some bytes
 ```
 
-This command will prompt you to confirm the deletion of unused volumes. Enter 'y' to proceed. 
-Remember that this action is irreversible, so only run this command if you're sure you no longer need the volumes.
+</div>
+
+These commands will prompt you to confirm the deletion. Enter `y` to proceed. 
+Remember that this action is irreversible, so only run this command if you're sure you no longer need these resources.
 
 ## 4. Remove the build cache
 
@@ -77,14 +101,20 @@ can take up when I was working on a project that required me to build a lot of D
 
 Thankfully, Docker provides a command to remove the build cache. To do so, use the following command:
 
-```bash
-docker builder prune
+<div class="termy">
+
+```console
+$ docker builder prune
+WARNING! This will remove all dangling build cache. Are you sure you want to continue? [y/N] y
+Total: some gigabytes
 ```
+
+</div>
 
 The build cache is used to accelerate the Docker image building process, but most of the time you don't need to keep it
 when you are going to build a new image for a new project.
 
-I saved 25GB of storage space on my workstation by removing the build cache of only one image. 😱
+I saved 25GB of storage space on my workstation by removing the build cache of only one project. 😱
 
 Imagine how much space you can save if you remove the build cache after months of working on different projects!
 
