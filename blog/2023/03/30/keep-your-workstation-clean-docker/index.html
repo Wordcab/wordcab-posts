@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../../../../css/timeago.css">
     
+      <link rel="stylesheet" href="../../../../../css/termynal.css">
+    
     <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -588,38 +590,80 @@ it is important to manage your workstation storage efficiently.</p>
 
 <h2 id="1-remove-unused-containers">1. Remove unused containers</h2>
 <p>Stopped containers can take up valuable storage space on your workstation. To remove them, use the following command:</p>
-<pre><code class="language-bash">docker container prune
+<div class="termy">
+
+
+<pre><code class="language-console">$ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: some bytes
 </code></pre>
-<p>This command will prompt you to confirm the deletion of stopped containers. Enter 'y' to proceed.
+
+
+</div>
+
+<p>This command will prompt you to confirm the deletion of stopped containers. Enter <code>y</code> to proceed.
 Be careful, as this action is irreversible.</p>
 <h2 id="2-remove-unused-images">2. Remove unused images</h2>
-<p>Unused images can also occupy significant storage space. I always have multiple NVIDIA images on my workstation because
-of the different versions of CUDA and cuDNN that I use for different projects.</p>
+<p>Unused images can also occupy significant storage space. I always have multiple <strong>NVIDIA</strong> images on my workstation because
+of the different versions of <strong>CUDA</strong> and <strong>cuDNN</strong> that I use for different projects.</p>
 <p>To remove unused images, use the following command:</p>
-<pre><code class="language-bash">docker image prune
+<div class="termy">
+
+
+<pre><code class="language-console">$ docker image prune
+WARNING! This will remove all dangling images.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: some bytes
 </code></pre>
-<p>Bye-bye, unused cuda11.0-cudnn8-devel-ubuntu18.04 image! 😢</p>
-<p>But hey, now we are all using CUDA 12.1 and PyTorch 2.0, right? </p>
+
+
+</div>
+
+<p>Bye-bye, unused <code>cuda11.0-cudnn8-devel-ubuntu18.04</code> image! 😢</p>
+<p>But hey, now we are all using <strong>CUDA 12.1</strong> and <strong>PyTorch 2.0</strong>, right? </p>
 <p>Right? 😅</p>
 <h2 id="3-remove-unused-networks-and-volumes">3. Remove unused networks and volumes</h2>
 <p>Unused networks and volumes can also take up storage space on your workstation.</p>
 <p>It's less the case when working with ML training, but if you have built some APIs on top of your ML models, you may have
 some unused networks and volumes. It's always a good idea to clean them up from time to time.</p>
-<p>To remove unused networks and volumes, use the following command:</p>
-<pre><code class="language-bash">docker network prune
-docker volume prune
+<p>To remove unused networks and volumes, use the following commands:</p>
+<div class="termy">
+
+
+<pre><code class="language-console">$ docker network prune
+WARNING! This will remove all custom networks not used by at least one container.
+Are you sure you want to continue? [y/N] y
+
+$ docker volume prune
+WARNING! This will remove all local volumes not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: some bytes
 </code></pre>
-<p>This command will prompt you to confirm the deletion of unused volumes. Enter 'y' to proceed. 
-Remember that this action is irreversible, so only run this command if you're sure you no longer need the volumes.</p>
+
+
+</div>
+
+<p>These commands will prompt you to confirm the deletion. Enter <code>y</code> to proceed. 
+Remember that this action is irreversible, so only run this command if you're sure you no longer need these resources.</p>
 <h2 id="4-remove-the-build-cache">4. Remove the build cache</h2>
 <p>One of the most common causes of unused files and storage is the build cache. I discovered how much space the build cache
 can take up when I was working on a project that required me to build a lot of Docker images.</p>
 <p>Thankfully, Docker provides a command to remove the build cache. To do so, use the following command:</p>
-<pre><code class="language-bash">docker builder prune
+<div class="termy">
+
+
+<pre><code class="language-console">$ docker builder prune
+WARNING! This will remove all dangling build cache. Are you sure you want to continue? [y/N] y
+Total: some gigabytes
 </code></pre>
+
+
+</div>
+
 <p>The build cache is used to accelerate the Docker image building process, but most of the time you don't need to keep it
 when you are going to build a new image for a new project.</p>
-<p>I saved 25GB of storage space on my workstation by removing the build cache of only one image. 😱</p>
+<p>I saved 25GB of storage space on my workstation by removing the build cache of only one project. 😱</p>
 <p>Imagine how much space you can save if you remove the build cache after months of working on different projects!</p>
 <hr />
 <p>By using these Docker commands, you can efficiently manage your workstation's storage, preventing unused files from
@@ -641,7 +685,7 @@ Only run them if you are certain you no longer need the resources. With a clean 
         <span class="md-icon" title="Last update">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
         </span>
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-30T16:33:22+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-30</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-30T17:05:12+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-30</span>
       </span>
     
     
@@ -726,6 +770,8 @@ Only run them if you are certain you no longer need the resources. With a clean 
   </div>
 
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -883,7 +929,7 @@ Only run them if you are certain you no longer need the resources. With a clean 
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.action.edit", "navigation.footer", "navigation.path", "navigation.prune", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.6c7302c4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.action.edit", "content.tabs.link", "navigation.footer", "navigation.path", "navigation.prune", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.6c7302c4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../../../../assets/javascripts/bundle.a3190745.min.js"></script>
@@ -891,6 +937,8 @@ Only run them if you are certain you no longer need the resources. With a clean 
         <script src="../../../../../js/timeago.min.js"></script>
       
         <script src="../../../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../../../js/termynal.js"></script>
       
     
   </body>
