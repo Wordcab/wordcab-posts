@@ -65,8 +65,8 @@ plugins:
       enabled: !ENV [CI, false]
   - search:
       lang: en
-  - social:
-      cards: !ENV [CARDS, false]
+  # - social:
+  #     cards: !ENV [CARDS, false]
   - termynal
 
 nav:
@@ -75,8 +75,13 @@ nav:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - codehilite
   - extra
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      alt: short
   - toc:
       permalink: true
 

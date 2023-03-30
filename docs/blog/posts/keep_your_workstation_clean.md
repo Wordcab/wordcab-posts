@@ -29,13 +29,10 @@ In this post, we'll cover how to use Docker commands to prevent unused files and
 
 Stopped containers can take up valuable storage space on your workstation. To remove them, use the following command:
 
-```console
+<!-- termynal -->
+
+```
 $ docker container prune
-
-WARNING! This will remove all stopped containers.
-Are you sure you want to continue? [y/N] y
-
-Total reclaimed space: some bytes
 ```
 
 This command will prompt you to confirm the deletion of stopped containers. Enter `y` to proceed.
@@ -48,13 +45,10 @@ of the different versions of **CUDA** and **cuDNN** that I use for different pro
 
 To remove unused images, use the following command:
 
-```console
+<!-- termynal -->
+
+```
 $ docker image prune
-
-WARNING! This will remove all dangling images.
-Are you sure you want to continue? [y/N] y
-
-Total reclaimed space: some bytes
 ```
 
 Bye-bye, unused `cuda11.0-cudnn8-devel-ubuntu18.04` image! 😢
@@ -72,18 +66,11 @@ some unused networks and volumes. It's always a good idea to clean them up from 
 
 To remove unused networks and volumes, use the following commands:
 
-```console
+<!-- termynal -->
+
+```
 $ docker network prune
-
-WARNING! This will remove all custom networks not used by at least one container.
-Are you sure you want to continue? [y/N] y
-
 $ docker volume prune
-
-WARNING! This will remove all local volumes not used by at least one container.
-Are you sure you want to continue? [y/N] y
-
-Total reclaimed space: some bytes
 ```
 
 These commands will prompt you to confirm the deletion. Enter `y` to proceed. 
@@ -96,12 +83,10 @@ can take up when I was working on a project that required me to build a lot of D
 
 Thankfully, Docker provides a command to remove the build cache. To do so, use the following command:
 
-```console
+<!-- termynal -->
+
+```
 $ docker builder prune
-
-WARNING! This will remove all dangling build cache. Are you sure you want to continue? [y/N] y
-
-Total: some gigabytes
 ```
 
 The build cache is used to accelerate the Docker image building process, but most of the time you don't need to keep it
