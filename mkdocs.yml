@@ -65,8 +65,9 @@ plugins:
       enabled: !ENV [CI, false]
   - search:
       lang: en
-  # - social:
-  #     cards: !ENV [CARDS, false]
+  - social:
+      cards: !ENV [CARDS, false]
+  - termynal
 
 nav:
   - 👋 Welcome Home: index.md
@@ -109,11 +110,3 @@ extra:
       link: https://github.com/Wordcab
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/wordcab
-
-extra_css:
-  - assets/css/custom.css
-  - assets/css/termynal.css
-
-extra_javascript:
-  - assets/js/custom.js
-  - assets/js/termynal.js
