@@ -33,8 +33,10 @@ Stopped containers can take up valuable storage space on your workstation. To re
 
 ```console
 $ docker container prune
+
 WARNING! This will remove all stopped containers.
 Are you sure you want to continue? [y/N] y
+
 Total reclaimed space: some bytes
 ```
 
@@ -54,8 +56,10 @@ To remove unused images, use the following command:
 
 ```console
 $ docker image prune
+
 WARNING! This will remove all dangling images.
 Are you sure you want to continue? [y/N] y
+
 Total reclaimed space: some bytes
 ```
 
@@ -80,12 +84,15 @@ To remove unused networks and volumes, use the following commands:
 
 ```console
 $ docker network prune
+
 WARNING! This will remove all custom networks not used by at least one container.
 Are you sure you want to continue? [y/N] y
 
 $ docker volume prune
+
 WARNING! This will remove all local volumes not used by at least one container.
 Are you sure you want to continue? [y/N] y
+
 Total reclaimed space: some bytes
 ```
 
@@ -105,7 +112,9 @@ Thankfully, Docker provides a command to remove the build cache. To do so, use t
 
 ```console
 $ docker builder prune
+
 WARNING! This will remove all dangling build cache. Are you sure you want to continue? [y/N] y
+
 Total: some gigabytes
 ```
 

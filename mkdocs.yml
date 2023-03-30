@@ -9,8 +9,8 @@ repo_name: Wordcab/wordcab-posts
 theme:
   name: material
   language: en
-  logo: assets/wordcab-favicon.png
-  favicon: assets/favicon.png
+  logo: assets/images/wordcab-favicon.png
+  favicon: assets/images/favicon.png
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil-plus
@@ -65,8 +65,8 @@ plugins:
       enabled: !ENV [CI, false]
   - search:
       lang: en
-  - social:
-      cards: !ENV [CARDS, false]
+  # - social:
+  #     cards: !ENV [CARDS, false]
 
 nav:
   - 👋 Welcome Home: index.md
@@ -103,6 +103,6 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/wordcab
 extra_css:
-- css/termynal.css
+- assets/css/termynal.css
 extra_javascript:
-- js/termynal.js
+- assets/js/termynal.js
