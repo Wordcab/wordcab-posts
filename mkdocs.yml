@@ -72,6 +72,13 @@ nav:
   - 👋 Welcome Home: index.md
   - 💬 Blog: blog/index.md
 
+markdown_extensions:
+  - admonition
+  - codehilite
+  - extra
+  - toc:
+      permalink: true
+
 extra:
   analytics:
     provider: google
@@ -102,7 +109,9 @@ extra:
       link: https://github.com/Wordcab
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/wordcab
+
 extra_css:
-- assets/css/termynal.css
+  - assets/css/termynal.css
+
 extra_javascript:
-- assets/js/termynal.js
+  - assets/js/termynal.js
