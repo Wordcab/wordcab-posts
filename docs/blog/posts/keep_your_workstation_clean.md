@@ -32,7 +32,9 @@ Stopped containers can take up valuable storage space on your workstation. To re
 <!-- termynal -->
 
 ```
+
 docker container prune
+
 ```
 
 This command will prompt you to confirm the deletion of stopped containers. Enter `y` to proceed.
@@ -48,7 +50,9 @@ To remove unused images, use the following command:
 <!-- termynal -->
 
 ```
+
 docker image prune
+
 ```
 
 Bye-bye, unused `cuda11.0-cudnn8-devel-ubuntu18.04` image! 😢
@@ -69,8 +73,10 @@ To remove unused networks and volumes, use the following commands:
 <!-- termynal -->
 
 ```
+
 docker network prune
 docker volume prune
+
 ```
 
 These commands will prompt you to confirm the deletion. Enter `y` to proceed. 
@@ -86,7 +92,9 @@ Thankfully, Docker provides a command to remove the build cache. To do so, use t
 <!-- termynal -->
 
 ```
+
 docker builder prune
+
 ```
 
 The build cache is used to accelerate the Docker image building process, but most of the time you don't need to keep it
