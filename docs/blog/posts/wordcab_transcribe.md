@@ -91,21 +91,15 @@ To run the Docker container, run the following command:
 
 docker run -d --name wordcab-transcribe \
     --gpus all \
-    --ipc=host \
-    --shm-size 64g \
-    --ulimit memlock=1 \
-    --ulimit stack=67108864 \
-    -p 5001:5001 \
+    --shm-size 1g \
     --restart unless-stopped \
+    -p 5001:5001 \
     wordcab-transcribe:latest
 
 ```
 
 - `--gpus all` - Use all the GPUs on the workstation. Example using a specific GPU: `--gpus "device=1"`.
-- `--shm-size 64g` - Increase the shared memory size to 64GB. This allow PyTorch to use more memory, which can be useful when using large models and multiple GPUs.
-- `--ipc=host` - Share the host's IPC namespace. This allows the container to benefit from the host's shared memory.
-- `--ulimit memlock=1` - Allow the container to lock memory on the GPU. This is recommended by NVIDIA for GPU containers.
-- `--ulimit stack=67108864` - Set the maximum stack size to 64MB. This can be useful for preventing stack overflow errors that may occur if the container tries to allocate more stack memory than is available.
+- `--shm-size 1g` - Increase the shared memory size to 1GB. This allow PyTorch to use more memory, which can be useful when using large models and multiple GPUs.
 
 The container will start and you'll be able to use the API once the models are downloaded and loaded.
 
@@ -124,7 +118,8 @@ DEBUG=True
 BATCH_SIZE=4
 MAX_WAIT=0.1
 WHISPER_MODEL="large-v2"
-EMBEDDING_MODEL="speechbrain/spkrec-ecapa-voxceleb"
+EMBEDDINGS_MODEL="speechbrain/spkrec-ecapa-voxceleb"
+COMPUTE_TYPE="int8_float16"
 ```
 
 To customize your deployment, you can edit the `.env` file and rebuild the Docker image.
@@ -134,7 +129,8 @@ To customize your deployment, you can edit the `.env` file and rebuild the Docke
 The default value is 0.1, which means that after 100ms, the audio files in the queue will be processed even if the 
 batch size is not reached.
 - WHISPER_MODEL - The name of the Whisper model to use. The default value is `large-v2`.
-- EMBEDDING_MODEL - The name of the speech embedding model to use. The default value is `speechbrain/spkrec-ecapa-voxceleb`.
+- EMBEDDINGS_MODEL - The name of the speech embeddings model to use. The default value is `speechbrain/spkrec-ecapa-voxceleb`.
+- COMPUTE_TYPE - The compute type to use. The default value is `int8_float16`.
 
 
 ## API Endpoints
