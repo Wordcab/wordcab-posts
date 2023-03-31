@@ -700,21 +700,15 @@ it's another 2GB of VRAM. <strong>So, you'll need at least 5GB of VRAM to run th
 <div class="termy" data-termynal>
 <span data-ty>docker run -d --name wordcab-transcribe \</span>
 <span data-ty>    --gpus all \</span>
-<span data-ty>    --ipc=host \</span>
-<span data-ty>    --shm-size 64g \</span>
-<span data-ty>    --ulimit memlock=1 \</span>
-<span data-ty>    --ulimit stack=67108864 \</span>
-<span data-ty>    -p 5001:5001 \</span>
+<span data-ty>    --shm-size 1g \</span>
 <span data-ty>    --restart unless-stopped \</span>
+<span data-ty>    -p 5001:5001 \</span>
 <span data-ty>    wordcab-transcribe:latest</span>
 <span data-ty></span>
 </div></p>
 <ul>
 <li><code>--gpus all</code> - Use all the GPUs on the workstation. Example using a specific GPU: <code>--gpus "device=1"</code>.</li>
-<li><code>--shm-size 64g</code> - Increase the shared memory size to 64GB. This allow PyTorch to use more memory, which can be useful when using large models and multiple GPUs.</li>
-<li><code>--ipc=host</code> - Share the host's IPC namespace. This allows the container to benefit from the host's shared memory.</li>
-<li><code>--ulimit memlock=1</code> - Allow the container to lock memory on the GPU. This is recommended by NVIDIA for GPU containers.</li>
-<li><code>--ulimit stack=67108864</code> - Set the maximum stack size to 64MB. This can be useful for preventing stack overflow errors that may occur if the container tries to allocate more stack memory than is available.</li>
+<li><code>--shm-size 1g</code> - Increase the shared memory size to 1GB. This allow PyTorch to use more memory, which can be useful when using large models and multiple GPUs.</li>
 </ul>
 <p>The container will start and you'll be able to use the API once the models are downloaded and loaded.</p>
 <h3 id="updating-configuration">Updating configuration<a class="headerlink" href="#updating-configuration" title="Permanent link">&para;</a></h3>
@@ -728,7 +722,8 @@ it's another 2GB of VRAM. <strong>So, you'll need at least 5GB of VRAM to run th
 <span class="nv">BATCH_SIZE</span><span class="o">=</span><span class="m">4</span>
 <span class="nv">MAX_WAIT</span><span class="o">=</span><span class="m">0</span>.1
 <span class="nv">WHISPER_MODEL</span><span class="o">=</span><span class="s2">&quot;large-v2&quot;</span>
-<span class="nv">EMBEDDING_MODEL</span><span class="o">=</span><span class="s2">&quot;speechbrain/spkrec-ecapa-voxceleb&quot;</span>
+<span class="nv">EMBEDDINGS_MODEL</span><span class="o">=</span><span class="s2">&quot;speechbrain/spkrec-ecapa-voxceleb&quot;</span>
+<span class="nv">COMPUTE_TYPE</span><span class="o">=</span><span class="s2">&quot;int8_float16&quot;</span>
 </code></pre></div>
 
 <p>To customize your deployment, you can edit the <code>.env</code> file and rebuild the Docker image.</p>
@@ -738,7 +733,8 @@ it's another 2GB of VRAM. <strong>So, you'll need at least 5GB of VRAM to run th
 The default value is 0.1, which means that after 100ms, the audio files in the queue will be processed even if the 
 batch size is not reached.</li>
 <li>WHISPER_MODEL - The name of the Whisper model to use. The default value is <code>large-v2</code>.</li>
-<li>EMBEDDING_MODEL - The name of the speech embedding model to use. The default value is <code>speechbrain/spkrec-ecapa-voxceleb</code>.</li>
+<li>EMBEDDINGS_MODEL - The name of the speech embeddings model to use. The default value is <code>speechbrain/spkrec-ecapa-voxceleb</code>.</li>
+<li>COMPUTE_TYPE - The compute type to use. The default value is <code>int8_float16</code>.</li>
 </ul>
 <h2 id="api-endpoints">API Endpoints<a class="headerlink" href="#api-endpoints" title="Permanent link">&para;</a></h2>
 <p>We provide two endpoints to transcribe audio:</p>
@@ -813,7 +809,7 @@ choice for developers and businesses seeking a reliable, cost-effective ASR solu
         <span class="md-icon" title="Last update">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
         </span>
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-31T08:55:44+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-31</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-03-31T15:26:37+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-03-31</span>
       </span>
     
     
