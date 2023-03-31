@@ -13,7 +13,7 @@ title: Wordcab Transcribe
 description: An open-source ASR solution using Whisper, Docker and FastAPI
 ---
 
-# Wordcab Transcribe: An open-source ASR solution using Whisper, Docker and FastAPI
+# Wordcab Transcribe - An open-source ASR solution using Whisper, Docker and FastAPI
 
 **Automatic Speech Recognition** (ASR) has become an essential tool for developers and businesses. 
 With Wordcab Transcribe, you can **leverage ASR in your projects without relying on expensive third-party platforms**.
@@ -32,14 +32,20 @@ than 5GB of VRAM on the GPU with the *large-v2* Whisper model.
 
 Wordcab Transcribe offers several advantages over closed ASR platforms:
 
-* **Open-source**: Our project is open-source and based on open-source libraries, allowing you to customize and extend it as needed.
-* **Fast**: The faster-whisper library and CTranslate2 make audio processing incredibly fast compared to other implementations.
-* **Easy to deploy**: You can deploy the project on your workstation or in the cloud using Docker.
-* **Batch requests**: You can transcribe multiple audio files at once because batch requests are implemented in the API.
-* **Cost-effective**: As an open-source solution, you won't have to pay for costly ASR platforms.
-* **Easy-to-use API**: With just a few lines of code, you can use the API to transcribe audio files or even YouTube videos.
+* 🤗 **Open-source**: Our project is open-source and based on open-source libraries, allowing you to customize and extend it as needed.
+* ⚡ **Fast**: The faster-whisper library and CTranslate2 make audio processing incredibly fast compared to other implementations.
+* 🐳 **Easy to deploy**: You can deploy the project on your workstation or in the cloud using Docker.
+* 🔥 **Batch requests**: You can transcribe multiple audio files at once because batch requests are implemented in the API.
+* 💸 **Cost-effective**: As an open-source solution, you won't have to pay for costly ASR platforms.
+* 🫶 **Easy-to-use API**: With just a few lines of code, you can use the API to transcribe audio files or even YouTube videos.
 
 All the code is available on [GitHub](https://github.com/Wordcab/wordcab-transcribe).
+
+!!! note
+    The project is still in its early stages, so it may not be suitable for production use. 
+    However, we are working on improving it and adding new features.
+
+    If you have any suggestions or feedback, please let us know in the [GitHub issues](https://github.com/Wordcab/wordcab-transcribe/issues).
 
 ## Building and running the project
 
@@ -53,7 +59,7 @@ To build and run the project, there are some prerequisites:
 * **Docker**: You'll need to install Docker on your workstation. You can follow the instructions [here](https://docs.docker.com/get-docker/).
 * **NVIDIA GPU**: You'll need an NVIDIA GPU with at least 5GB of VRAM to run the project.
 
-!!! note
+!!! tip
     The project uses the `large-v2` model from OpenAI Whisper, which requires at least 2.5GB of VRAM, and with a batch size of 1,
     it's another 2GB of VRAM. **So, you'll need at least 5GB of VRAM to run the project.**
 
@@ -103,6 +109,34 @@ docker run -d --name wordcab-transcribe \
 
 The container will start and you'll be able to use the API once the models are downloaded and loaded.
 
+### Updating configuration
+
+You can update the configuration by editing the `.env` file.
+
+The configuration file is used to set the following parameters:
+
+```bash
+PROJECT_NAME="Wordcab Transcribe"
+VERSION="0.1.0"
+DESCRIPTION="ASR FastAPI server using faster-whisper and pyannote-audio."
+API_PREFIX="/api/v1"
+DEBUG=True
+BATCH_SIZE=4
+MAX_WAIT=0.1
+WHISPER_MODEL="large-v2"
+EMBEDDING_MODEL="speechbrain/spkrec-ecapa-voxceleb"
+```
+
+To customize your deployment, you can edit the `.env` file and rebuild the Docker image.
+
+- BATCH_SIZE - The maximum number of audio files to process in parallel. The default value is 4.
+- MAX_WAIT - The maximum number of seconds to wait to process the audio files in the queue. 
+The default value is 0.1, which means that after 100ms, the audio files in the queue will be processed even if the 
+batch size is not reached.
+- WHISPER_MODEL - The name of the Whisper model to use. The default value is `large-v2`.
+- EMBEDDING_MODEL - The name of the speech embedding model to use. The default value is `speechbrain/spkrec-ecapa-voxceleb`.
+
+
 ## API Endpoints
 
 We provide two endpoints to transcribe audio:
@@ -134,10 +168,10 @@ Alternatively, you can use `curl` in the terminal:
 ```
 
 curl -X 'POST' \
-  'http://localhost:5001/api/v1/youtube' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'file=@/path/to/audio/file.wav'
+    'http://localhost:5001/api/v1/youtube' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: multipart/form-data' \
+    -F 'file=@/path/to/audio/file.wav'
 
 ```
 
@@ -161,7 +195,8 @@ Or with `curl`:
 
 ```
 
-curl -X POST "http://localhost:5001/api/v1/youtube?url=https://youtu.be/dQw4w9WgXcQ"
+curl -X 'POST' \
+    'http://localhost:5001/api/v1/youtube?url=https://youtu.be/dQw4w9WgXcQ'
 
 ```
 
