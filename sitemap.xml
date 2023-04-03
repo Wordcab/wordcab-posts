@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/2023/04/03/nvidia-docker-images-for-deep-learning-on-gpus/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/2023/03/29/we-are-all-learners/</loc>
          <lastmod>2023-04-03</lastmod>
          <changefreq>daily</changefreq>
@@ -31,17 +36,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/asr/</loc>
-         <lastmod>2023-04-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/nvidia/</loc>
-         <lastmod>2023-04-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/openai/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/machine-learning/</loc>
          <lastmod>2023-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -51,7 +46,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/machine-learning/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/nvidia/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/asr/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/openai/</loc>
          <lastmod>2023-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
