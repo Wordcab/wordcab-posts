@@ -11,6 +11,9 @@ title: NVIDIA Docker Images for Deep Learning on GPUs
 description: A step-by-step guide to flexing your GPU muscles with NVIDIA Docker Images!
 ---
 
+# NVIDIA Docker Images for Deep Learning on GPUs
+## A step-by-step guide to flexing your GPU muscles with NVIDIA Docker Images!
+
 Are you ready to conquer the high seas of deep learning with the help of NVIDIA Docker Images?
 
 Well, you've come to the right place! In this treasure trove of a blog post, we'll guide you through the uncharted waters of the installation process, present a standard Dockerfile, and show you some nifty commands to launch your training like a seasoned sailor. 
