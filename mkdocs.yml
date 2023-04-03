@@ -88,7 +88,7 @@ markdown_extensions:
 extra:
   analytics:
     provider: google
-    property: G-196126008
+    property: G-5DNGRVFCQC
     feedback:
       title: Was this page informative?
       ratings:
