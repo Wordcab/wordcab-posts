@@ -11,7 +11,7 @@ title: Turbocharge your tokenization exploiting parallelism
 description: Parallelize Hugging Face Tokenizers with num_proc
 ---
 
-# Turbocharge your tokenization exploiting parallelism
+# Turbocharge your tokenization by exploiting parallelism
 ## Parallelize Hugging Face Tokenizers with num_proc
 
 ![Parallelize Hugging Face Tokenizers with num_proc](assets/images/parallelize_tokenization.png)
@@ -26,13 +26,12 @@ In this blog post, we'll show you how to parallelize your tokenization using Hug
 
 ## Hugging Face Tokenizers
 
-[Hugging Face](https://huggingface.co/), "the AI community building the future", offer a library called `transformers`, which provides state-of-the-art models and tokenizers for various ML tasks. 
+[Hugging Face](https://huggingface.co/), "the AI community building the future", offers a library called `transformers`, which provides state-of-the-art models and tokenizers for various ML tasks. 
 
 !!! tip
     If you're not familiar with Hugging Face, we highly recommend you check it out!
-    You should be a cave-dwelling hermit not to have heard of it by now. 🤷‍♂️
 
-Tokenization is the process of converting text into smaller units (=tokens), such as words or subwords, that can be more easily processed by NLP models.
+Tokenization is the process of converting text into smaller units (aka _tokens_), such as words or subwords, that can be more easily processed by NLP models.
 
 It's an essential step in preparing your data for tasks like text classification, sentiment analysis, and machine translation.
 
@@ -93,9 +92,9 @@ num_cores = multiprocessing.cpu_count() - 1
 
 ## Time to parallelize!
 
-It could seem like a small change, but parallelization can make a huge difference in your tokenization time.
+It seems like a small change, but parallelization can make a huge difference in your tokenization time.
 
-For example, I had to process a 40GB dataset including more than 6 million samples. It take about 4 hours to tokenize it with a single core,
+For example, I had to process a 40GB dataset with over 6 million samples. It takes about 4 hours to tokenize it with a single core,
 but less than 5 minutes with 96 cores!
 
 I know, you're probably thinking "that's great, but I don't have 96 cores" 😅. You're right, but you can still benefit from parallelization,
