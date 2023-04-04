@@ -597,7 +597,7 @@ it is important to manage your workstation storage efficiently.</p>
 <p>
 <div class="termy" data-termynal>
 <span data-ty>docker container prune</span>
-<span data-ty></span>
+<span data-ty></span></span>
 </div></p>
 <p>This command will prompt you to confirm the deletion of stopped containers. Enter <code>y</code> to proceed.
 Be careful, as this action is irreversible.</p>
@@ -610,7 +610,7 @@ of the different versions of <strong>CUDA</strong> and <strong>cuDNN</strong> th
 <p>
 <div class="termy" data-termynal>
 <span data-ty>docker image prune</span>
-<span data-ty></span>
+<span data-ty></span></span>
 </div></p>
 <p>Bye-bye, unused <code>cuda11.0-cudnn8-devel-ubuntu18.04</code> image! 😢</p>
 <p>But hey, now we are all using <strong>CUDA 12.1</strong> and <strong>PyTorch 2.0</strong>, right? </p>
@@ -625,8 +625,8 @@ some unused networks and volumes. It's always a good idea to clean them up from 
 <p>
 <div class="termy" data-termynal>
 <span data-ty>docker network prune</span>
-<span data-ty>docker volume prune</span>
-<span data-ty></span>
+<span data-ty></span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker volume prune</span>
+<span data-ty></span></span>
 </div></p>
 <p>These commands will prompt you to confirm the deletion. Enter <code>y</code> to proceed. 
 Remember that this action is irreversible, so only run this command if you're sure you no longer need these resources.</p>
@@ -639,7 +639,7 @@ can take up when I was working on a project that required me to build a lot of D
 <p>
 <div class="termy" data-termynal>
 <span data-ty>docker builder prune</span>
-<span data-ty></span>
+<span data-ty></span></span>
 </div></p>
 <p>The build cache is used to accelerate the Docker image building process, but most of the time you don't need to keep it
 when you are going to build a new image for a new project.</p>

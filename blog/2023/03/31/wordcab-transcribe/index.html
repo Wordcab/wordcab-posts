@@ -691,7 +691,7 @@ it's another 2GB of VRAM. <strong>So, you'll need at least 5GB of VRAM to run th
 <p>
 <div class="termy" data-termynal>
 <span data-ty>docker build -t wordcab-transcribe:latest .</span>
-<span data-ty></span>
+<span data-ty></span></span>
 </div></p>
 <p>Depending on your internet connection, it may take a few minutes to download the NVIDIA base image.</p>
 <h3 id="running-the-docker-container">Running the Docker container<a class="headerlink" href="#running-the-docker-container" title="Permanent link">&para;</a></h3>
@@ -701,12 +701,12 @@ it's another 2GB of VRAM. <strong>So, you'll need at least 5GB of VRAM to run th
 <p>
 <div class="termy" data-termynal>
 <span data-ty>docker run -d --name wordcab-transcribe \</span>
-<span data-ty>    --gpus all \</span>
-<span data-ty>    --shm-size 1g \</span>
-<span data-ty>    --restart unless-stopped \</span>
-<span data-ty>    -p 5001:5001 \</span>
-<span data-ty>    wordcab-transcribe:latest</span>
-<span data-ty></span>
+<span data-ty></span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    --gpus all \</span>
+<span data-ty></span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    --shm-size 1g \</span>
+<span data-ty></span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    --restart unless-stopped \</span>
+<span data-ty></span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    -p 5001:5001 \</span>
+<span data-ty></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    wordcab-transcribe:latest</span>
+<span data-ty></span></span>
 </div></p>
 <ul>
 <li><code>--gpus all</code> - Use all the GPUs on the workstation. Example using a specific GPU: <code>--gpus "device=1"</code>.</li>
@@ -716,18 +716,17 @@ it's another 2GB of VRAM. <strong>So, you'll need at least 5GB of VRAM to run th
 <h3 id="updating-configuration">Updating configuration<a class="headerlink" href="#updating-configuration" title="Permanent link">&para;</a></h3>
 <p>You can update the configuration by editing the <code>.env</code> file.</p>
 <p>The configuration file is used to set the following parameters:</p>
-<div class="codehilite"><pre><span></span><code><span class="nv">PROJECT_NAME</span><span class="o">=</span><span class="s2">&quot;Wordcab Transcribe&quot;</span>
-<span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;0.1.0&quot;</span>
-<span class="nv">DESCRIPTION</span><span class="o">=</span><span class="s2">&quot;ASR FastAPI server using faster-whisper and pyannote-audio.&quot;</span>
-<span class="nv">API_PREFIX</span><span class="o">=</span><span class="s2">&quot;/api/v1&quot;</span>
-<span class="nv">DEBUG</span><span class="o">=</span>True
-<span class="nv">BATCH_SIZE</span><span class="o">=</span><span class="m">4</span>
-<span class="nv">MAX_WAIT</span><span class="o">=</span><span class="m">0</span>.1
-<span class="nv">WHISPER_MODEL</span><span class="o">=</span><span class="s2">&quot;large-v2&quot;</span>
-<span class="nv">EMBEDDINGS_MODEL</span><span class="o">=</span><span class="s2">&quot;speechbrain/spkrec-ecapa-voxceleb&quot;</span>
-<span class="nv">COMPUTE_TYPE</span><span class="o">=</span><span class="s2">&quot;int8_float16&quot;</span>
-</code></pre></div>
-
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">PROJECT_NAME</span><span class="o">=</span><span class="s2">&quot;Wordcab Transcribe&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;0.1.0&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nv">DESCRIPTION</span><span class="o">=</span><span class="s2">&quot;ASR FastAPI server using faster-whisper and pyannote-audio.&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nv">API_PREFIX</span><span class="o">=</span><span class="s2">&quot;/api/v1&quot;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nv">DEBUG</span><span class="o">=</span>True
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nv">BATCH_SIZE</span><span class="o">=</span><span class="m">4</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nv">MAX_WAIT</span><span class="o">=</span><span class="m">0</span>.1
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nv">WHISPER_MODEL</span><span class="o">=</span><span class="s2">&quot;large-v2&quot;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nv">EMBEDDINGS_MODEL</span><span class="o">=</span><span class="s2">&quot;speechbrain/spkrec-ecapa-voxceleb&quot;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nv">COMPUTE_TYPE</span><span class="o">=</span><span class="s2">&quot;int8_float16&quot;</span>
+</span></code></pre></div>
 <p>To customize your deployment, you can edit the <code>.env</code> file and rebuild the Docker image.</p>
 <ul>
 <li>BATCH_SIZE - The maximum number of audio files to process in parallel. The default value is 4.</li>
@@ -746,49 +745,47 @@ batch size is not reached.</li>
 </ol>
 <h3 id="transcribing-an-audio-file">Transcribing an audio file<a class="headerlink" href="#transcribing-an-audio-file" title="Permanent link">&para;</a></h3>
 <p>To transcribe an audio file, use the <code>/api/v1/audio</code> endpoint. Here's an example using Python and the <code>requests</code> library:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;sample_1.mp3&quot;</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:5001/api/v1/audio&quot;</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">f</span><span class="p">)}</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;sample_1.mp3&quot;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:5001/api/v1/audio&quot;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">files</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">f</span><span class="p">)}</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</span></code></pre></div>
 <p>Alternatively, you can use <code>curl</code> in the terminal:</p>
 <!-- termynal -->
 
 <p>
 <div class="termy" data-termynal>
 <span data-ty>curl -X &#39;POST&#39; \</span>
-<span data-ty>    &#39;http://localhost:5001/api/v1/youtube&#39; \</span>
-<span data-ty>    -H &#39;accept: application/json&#39; \</span>
-<span data-ty>    -H &#39;Content-Type: multipart/form-data&#39; \</span>
-<span data-ty>    -F &#39;file=@/path/to/audio/file.wav&#39;</span>
-<span data-ty></span>
+<span data-ty></span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    &#39;http://localhost:5001/api/v1/youtube&#39; \</span>
+<span data-ty></span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    -H &#39;accept: application/json&#39; \</span>
+<span data-ty></span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    -H &#39;Content-Type: multipart/form-data&#39; \</span>
+<span data-ty></span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    -F &#39;file=@/path/to/audio/file.wav&#39;</span>
+<span data-ty></span></span>
 </div></p>
 <h3 id="transcribing-a-youtube-video">Transcribing a YouTube video<a class="headerlink" href="#transcribing-a-youtube-video" title="Permanent link">&para;</a></h3>
 <p>To transcribe a YouTube video, use the <code>/api/v1/youtube</code> endpoint. Here's an example using Python and the <code>requests</code> library:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">video_url</span> <span class="o">=</span> <span class="s2">&quot;https://youtu.be/dQw4w9WgXcQ&quot;</span>
-<span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://localhost:5001/api/v1/youtube?url=</span><span class="si">{</span><span class="n">video_url</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
-</code></pre></div>
-
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">video_url</span> <span class="o">=</span> <span class="s2">&quot;https://youtu.be/dQw4w9WgXcQ&quot;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;http://localhost:5001/api/v1/youtube?url=</span><span class="si">{</span><span class="n">video_url</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</span></code></pre></div>
 <p>Or with <code>curl</code>:</p>
 <!-- termynal -->
 
 <p>
 <div class="termy" data-termynal>
 <span data-ty>curl -X &#39;POST&#39; \</span>
-<span data-ty>    &#39;http://localhost:5001/api/v1/youtube?url=https://youtu.be/dQw4w9WgXcQ&#39;</span>
-<span data-ty></span>
+<span data-ty></span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    &#39;http://localhost:5001/api/v1/youtube?url=https://youtu.be/dQw4w9WgXcQ&#39;</span>
+<span data-ty></span></span>
 </div></p>
 <hr />
 <p>Wordcab Transcribe is a powerful, open-source ASR solution built with Docker, FastAPI, and the faster-whisper library.</p>
