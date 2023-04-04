@@ -56,7 +56,7 @@ Nowadays, most computers have multiple cores, so you can easily speed up your to
 
 Here's a code snippet illustrating how to use the num_proc parameter:
 
-```python
+``` py
 import multiprocessing
 
 from datasets import load_dataset
@@ -78,7 +78,7 @@ test_data = data["test"].map(lambda sample: tokenizer(sample["text"]), num_proc=
 
 If you don't want to use all your available cores, you can specify a lower number or even limit the number of cores to a specific range.
 
-```python
+``` py
 # Use only 8 cores maximum
 num_cores = min(8, multiprocessing.cpu_count())
 
