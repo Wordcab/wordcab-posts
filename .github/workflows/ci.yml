@@ -21,7 +21,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.*
+          python-version: 3.x
 
       - name: Cache dependencies
         uses: actions/cache@v2
@@ -31,6 +31,7 @@ jobs:
       
       - name: Install dependencies
         run: |
+          apt-get install pngquant
           pip install git+https://${{ secrets.GH_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
           pip install -r requirements.txt
           mkdocs gh-deploy --force
