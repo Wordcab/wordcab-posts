@@ -14,7 +14,7 @@ description: Parallelize Hugging Face Tokenizers with num_proc
 # Turbocharge your tokenization exploiting parallelism
 ## Parallelize Hugging Face Tokenizers with num_proc
 
-![Parallelize Hugging Face Tokenizers with num_proc](/images/parallelize_tokenization.png)
+![Parallelize Hugging Face Tokenizers with num_proc](assets/images/parallelize_tokenization.png)
 
 Processing large datasets can be time-consuming, especially when it comes to tokenizing text.
 
