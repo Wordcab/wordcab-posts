@@ -31,7 +31,6 @@ jobs:
       
       - name: Install dependencies
         run: |
-          apt-get install pngquant
           pip install git+https://${{ secrets.GH_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
           pip install -r requirements.txt
           mkdocs gh-deploy --force
