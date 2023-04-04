@@ -6,7 +6,7 @@
 	</a>
 </div>
 
-Repository for the [Wordcab blog](https://blog.wordcab.com/).
+Repository for the [Wordcab blog](https://wordcab.github.io/wordcab-posts/blog/).
 
 # What is Wordcab?
 
