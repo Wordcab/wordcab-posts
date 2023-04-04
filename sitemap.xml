@@ -36,12 +36,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/tokenizers/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/huggingface/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/huggingface/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/tokenizers/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -56,6 +56,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/openai/</loc>
+         <lastmod>2023-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/category/nvidia/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
@@ -66,17 +71,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/openai/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/essay/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/category/learning/</loc>
-         <lastmod>2023-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/essay/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
