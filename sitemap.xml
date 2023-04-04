@@ -36,17 +36,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/tokenizers/</loc>
-         <lastmod>2023-04-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/category/huggingface/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/category/machine-learning/</loc>
+         <lastmod>2023-04-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/tokenizers/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -61,12 +61,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/asr/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/docker/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/docker/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/asr/</loc>
          <lastmod>2023-04-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
