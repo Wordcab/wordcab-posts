@@ -16,7 +16,7 @@ description: An open-source ASR solution using Whisper, Docker and FastAPI
 As a machine learning engineer and open-source enthusiast, I've always been driven by the desire to create solutions 
 that bridge the gap between technological capability and universal accessibility. 
 
-Out of this pursuit, Wordcab Transcribe was born - a FastAPI based API for transcribing audio files using Faster-Whisper 
+Out of this pursuit, **Wordcab Transcribe** was born - a FastAPI based API for transcribing audio files using Faster-Whisper 
 and NVIDIA NeMo.
 
 This journey of creating an open-source, production-ready transcription service has been both challenging and rewarding.
@@ -78,9 +78,9 @@ surprise us. This is why I'm so **passionate about open-source** projects.
 
 Each line of code written, each feature developed, each bug fixed brought a sense of accomplishment.
 
-It's super hard to develop an universal tool that achieves close performance for all languages, especially when you
-don't speak or read more than three languages. But we are always polishing the tool and trying to improve it also for
-low resource languages.
+It's hard to develop a universal tool that achieves close performance for all languages, especially when you
+don't speak or read more than three languages. But we are always polishing the tool and trying to improve it for
+low-resource languages.
 
 Our roadmap is filled with further optimizations, new features, and countless opportunities to learn and grow. But the 
 goal remains the same: to **ensure that production-ready ASR resources are universally accessible**.
