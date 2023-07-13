@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 date: 2023-07-13
 categories:
     - asr
@@ -38,7 +38,7 @@ apart from many ASR implementations on the market.
 
 Faster-whisper is easily installable in a Python project and provides a simple interface for transcribing audio files.
 It is based on the [Whisper](https://github.com/openai/whisper) library and model, and new custom models can be added
-as well. It's creator has put a lot of effort into making it similar to the original implementation, and keeps adding
+as well. Its creator has put a lot of effort into making it similar to the original implementation, and keeps adding
 new features as soon as they are available in the original library.
 
 !!! tip
@@ -51,28 +51,29 @@ a layer of convenience, and the batch request feature extended its flexibility f
 The API was designed to handle a variety of tasks with ease. A few lines of Python code enable users to transcribe an 
 audio file or a YouTube video, complete with options for diarization, and timestamping.
 
-## A Philosophical Perspective: Transcription as Universal Access
+It's funny to see that super efficient and qualitative tools are available for free and require a little bit of 
+engineering to be used together. This is the beauty of open-source.
 
-Developing Wordcab Transcribe was not just about creating a tool. It was about championing a philosophy – a belief 
-in the universality of information access. In our modern age, where data is increasingly important, access to 
-information should be a right, not a privilege. Like water flowing freely, quality transcription should be universally 
-accessible.
+## A Philosophical Perspective
 
-Open-source projects such as Wordcab Transcribe are the vessels that carry this philosophy forward. By democratizing the 
-process of transcription, we are not only enhancing access to information but also stimulating innovation and fostering 
-collaboration.
+Developing Wordcab Transcribe was not just about creating a useful ASR tool. It was about following through on a 
+longstanding philosophy at Wordcab: because so many downstream processes depend on accurate transcription, production-ready 
+ASR should be a freely available commodity.
 
-Transcription, in essence, is about breaking down barriers. It's about ensuring that auditory content is accessible and 
-comprehensible to everyone, irrespective of their language proficiency, hearing abilities, or learning preferences. 
+Accurate transcription leads to more accurate _translation_, _summarization_, and information _extraction_. While paid services 
+make sense ([we offer ASR ourselves](https://wordcab.com/)) given the amount of time and maintenance required for product 
+ASR, there should be quality self-hosted options that even beginner developers can build upon.
 
-Open-source projects such as Wordcab Transcribe allow us to inch closer to this ideal, paving the way for a more 
-inclusive, equitable future.
-
-As a techie, I believe that giving access to that kind of technology to everyone allows them to create new things, or
-add extra layers on top of it. This is why I'm so passionate about open-source projects.
+As a techie, I believe that giving access to that kind of technology to everyone allows them to create projects that even 
+surprise us. This is why I'm so **passionate about open-source** projects.
 
 ## Reflections
 
-Looking back, the journey of creating Wordcab Transcribe has been a fulfilling one. Each line of code written, each feature developed, each bug fixed brought with it a sense of accomplishment. This open-source API is more than just a tool for transcribing audio files. It's a testament to what we can achieve when we leverage technology for the greater good.
+Each line of code written, each feature developed, each bug fixed brought a sense of accomplishment.
 
-As the creator of Wordcab Transcribe, my journey doesn't end here. The roadmap is filled with potential enhancements, new features, and countless opportunities to learn and grow. The goal remains the same: to ensure that quality resources are as universally accessible as water. After all, like water, access to information is a fundamental human necessity.
+It's super hard to develop an universal tool that achieves close performance for all languages, especially when you
+don't speak or read more than three languages. But we are always polishing the tool and trying to improve it also for
+low resource languages.
+
+Our roadmap is filled with further optimizations, new features, and countless opportunities to learn and grow. But the 
+goal remains the same: to **ensure that production-ready ASR resources are universally accessible**.
