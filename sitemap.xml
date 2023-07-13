@@ -41,11 +41,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/faster-whisper/</loc>
-         <lastmod>2023-07-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/category/docker/</loc>
          <lastmod>2023-07-13</lastmod>
          <changefreq>daily</changefreq>
@@ -56,12 +51,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/machine-learning/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/faster-whisper/</loc>
          <lastmod>2023-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/category/huggingface/</loc>
+         <lastmod>2023-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/machine-learning/</loc>
          <lastmod>2023-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
