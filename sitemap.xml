@@ -31,17 +31,37 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/2023/07/13/wordcab-transcribe/</loc>
+         <lastmod>2023-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/archive/2023/</loc>
          <lastmod>2023-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/huggingface/</loc>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/faster-whisper/</loc>
+         <lastmod>2023-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/asr/</loc>
+         <lastmod>2023-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/docker/</loc>
          <lastmod>2023-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/category/tokenizers/</loc>
+         <lastmod>2023-07-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wordcab.github.io/wordcab-posts/blog/category/huggingface/</loc>
          <lastmod>2023-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -56,17 +76,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/asr/</loc>
-         <lastmod>2023-07-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wordcab.github.io/wordcab-posts/blog/category/nvidia/</loc>
-         <lastmod>2023-07-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wordcab.github.io/wordcab-posts/blog/category/docker/</loc>
          <lastmod>2023-07-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
