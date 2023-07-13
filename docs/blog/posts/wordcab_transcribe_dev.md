@@ -21,6 +21,13 @@ and NVIDIA NeMo.
 
 This journey of creating an open-source, production-ready transcription service has been both challenging and rewarding.
 
+<p align="center">
+    <img
+        src="https://github.com/Wordcab/wordcab-posts/blob/main/docs/assets/images/wordcab_transcribe_asset.png?raw=true"
+        alt="asr tools logo" width="50%"
+    />
+</p>
+
 <!-- more -->
 
 ## Building Wordcab Transcribe
